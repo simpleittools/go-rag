@@ -114,7 +114,7 @@ func (s *spinner) Stop() {
 }
 
 func seedHistory(path string) ([]llm.Message, error) {
-	if path != "" {
+	if path == "" {
 		return nil, nil
 	}
 	data, err := os.ReadFile(path)
